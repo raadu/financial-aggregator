@@ -49,9 +49,15 @@
 						</ul>
 					</li>
 					<li><a href="contact.html">Contact</a></li>
+					<!--if condition to show logout button to logged in users 
+					and hide login, register button from logged in users  -->
+					{{#if user}}
+					<li><a class="btn" href="/users/logout">Logout</a></li>
+					{{else}}
 					<li><a class="btn" href="/users/register">Register</a></li>
 					<li><a class="btn" href="/users/login">Login</a></li>
-					<li><a class="btn" href="/users/logout">Logout</a></li>
+					{{/if}}
+					
 				</ul>
 			</div><!--/.nav-collapse -->
 		</div>
