@@ -16,48 +16,46 @@
 						<div class="panel-body">
 							<h2 class="thin text-center">Register</h2>
 							<p class="text-center text-muted">Lorem ipsum dolor sit amet, <a href="signin.html">Login</a> adipisicing elit. Quo nulla quibusdam cum doloremque incidunt nemo sunt a tenetur omnis odio. </p>
-							<hr>
+							
+<!-- Form error handling starts -->
+{{#if errors}}
+      {{#each errors}}
+        <div class="alert alert-danger">{{msg}}</div>
+      {{/each}}
+{{/if}}
+<!-- Form error handling ends -->
 
-							<form>
+							<form method="post" action="/users/register">
 								
-								<div class="top-margin">
+								<div class="form-group">
 									<label>Name</label>
-									<input type="text" class="form-control">
+									<input type="text" class="form-control" name="name">
 								</div>
-								<div class="top-margin">
+
+								<div class="form-group">
 									<label>Email Address <span class="text-danger">*</span></label>
-									<input type="text" class="form-control">
+									<input type="text" class="form-control" name="email">
 								</div>
 
-								<div class="row top-margin">
-									<div class="col-sm-6">
-										<label>Password <span class="text-danger">*</span></label>
-										<input type="password" class="form-control">
-									</div>
-									
+								<div class="form-group">
+									<label>Password <span class="text-danger">*</span></label>
+									<input type="password" class="form-control" name="password">
 								</div>
-
-								<hr>
 
 								<div class="row">
 									<div class="col-lg-8">
 										<button class="btn btn-action" href="/users/login"  type="submit">already a member?Login</button>
-
-										
-										
-										
-											
-										</label>                        
 									</div>
-									<div class="col-lg-4 text-right">
-										<button class="btn btn-action" type="submit">Register</button>
-
-
-
-									</div>
-									
 								</div>
+									
+								<div class="col-lg-4 text-right">
+										<button class="btn btn-dafault" type="submit">Register</button>
+								</div>
+									
+							</form>
+
 								<div class="col-md-8 widget">
+						
 						<h2 class="widget-title">Also Sign in with </h2>
 						<div class="widget-body">
 							<p class="follow-me-icons clearfix">
@@ -68,7 +66,7 @@
 							</p>	
 						</div>
 					</div>
-							</form>
+							
 						</div>
 					</div>
 
