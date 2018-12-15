@@ -10,7 +10,8 @@ var passport = require('passport');
 var LocalStrategy = require('passport-local').Strategy;
 var mongo = require('mongodb');
 var mongoose = require('mongoose');
-mongoose.connect('mongodb://localhost/fintech');
+mongoose.connect('mongodb://localhost/fintech', { useNewUrlParser: true });
+mongoose.set('useCreateIndex', true);
 var db = mongoose.connection;
 
 var routes = require('./routes/index');
@@ -26,7 +27,7 @@ app.set('view engine', 'handlebars');
 
 // BodyParser Middleware
 app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.urlencoded({ extended: true }));
 app.use(cookieParser());
 
 // Set Static Folder

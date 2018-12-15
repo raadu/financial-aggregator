@@ -4,12 +4,14 @@ var bcrypt = require('bcryptjs');
 
 // User Schema
 var UserSchema = mongoose.Schema({
-	name: {
+	username: {
 		type: String,
+		index:true
 		
 	},
 	email: {
-		type: String
+		type: String,
+		
 	},
 	password: {
 		type: String
@@ -26,4 +28,23 @@ module.exports.createUser = function(newUser, callback){
 	        newUser.save(callback);
 	    });
 });
+}
+
+//Login model for user login by user email
+module.exports.getUserByUsername = function(username, callback){
+	var query = {username: username};
+	User.findOne(query, callback);
+}
+
+//mongoose method to get user by id during login
+module.exports.getUserById = function(id, callback){
+	User.findById(id, callback);
+}
+
+//method to compare password during login
+module.exports.comparePassword = function(candidatePassword, hash, callback){
+	bcrypt.compare(candidatePassword, hash, function(err, isMatch) {
+    	if(err) throw err;
+    	callback(null, isMatch);
+	});
 }

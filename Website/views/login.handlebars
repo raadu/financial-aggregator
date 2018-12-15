@@ -16,42 +16,32 @@
 						<div class="panel-body">
 							<h2 class="thin text-center">Login</h2>
 							<p class="text-center text-muted">Lorem ipsum dolor sit amet, <a href="signin.html">Login</a> adipisicing elit. Quo nulla quibusdam cum doloremque incidunt nemo sunt a tenetur omnis odio. </p>
-							<hr>
+							
 
-							<form>
+							<form method="post" action="/users/login">
 								
 								
-								<div class="top-margin">
-									<label>Email<span class="text-danger">*</span></label>
-									<input type="text" class="form-control">
+								<div class="form-group">
+									<label>Username<span class="text-danger">*</span></label>
+									<input type="text" class="form-control" name="username">
 								</div>
 
-								<div class="row top-margin">
-									<div class="col-sm-6">
-										<label>Password <span class="text-danger">*</span></label>
-										<input type="password" class="form-control">
-									</div>
-									
+								<div class="form-group">
+									<label>Password <span class="text-danger">*</span></label>
+										<input type="password" class="form-control" name="password">
+			
 								</div>
-
-								<hr>
 
 								<div class="row">
 									<div class="col-lg-8">
 										<button class="btn btn-action" href="/users/register" type="submit">Not a member?REGISTER</button>
-
-										
-										
-										
-											
-										</label>                        
+	               
 									</div>
 									<div class="col-lg-4 text-right">
-										<button class="btn btn-action" type="submit">Login</button>
-
-
-
+										<button class="btn btn-default" type="submit">Login</button>
 									</div>
+
+							</form>
 									
 								</div>
 								<div class="col-md-8 widget">
@@ -65,7 +55,7 @@
 							</p>	
 						</div>
 					</div>
-							</form>
+							
 						</div>
 					</div>
 
