@@ -1,0 +1,46 @@
+<div class="container">
+  <h2>Credit Card List</h2>
+  <p></p>            
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th>Bank Name</th>
+        <th>Card Name</th>
+        <th>Card Type</th>
+        <th>Annual Fee</th>
+        <th>Monthly Interest Rate</th>
+        <th>Card Replacement Fee</th>
+        <th>Late Payement Fee</th>
+        <th>Over Limit Charge</th>
+        <th>Supplementary Card Fee</th>
+        <th>Card Replacement Fee</th>
+        <th>PIN Replacement Fee</th>
+        <th>Cash Advance Limit</th>
+        <th>Cash Advance Charge (Local)</th>
+        <th>Cash Advance Charge (International)</th>
+      </tr>
+    </thead>
+    <tbody>
+    	{{#each items}}
+      <tr class="item">
+        <td>{{ this.bankName}}</td>
+        <td>{{ this.cardName}}</td>
+        <td>{{ this.cardType}}</td>
+        <td>{{ this.annualFee}}</td>
+        <td>{{ this.interestRateMonthly}}</td>
+        <td>{{ this.cardReplacementFee}}</td>
+        <td>{{ this.latePaymentFee}}</td>
+        <td>{{ this.overLimitCharge}}</td>
+        <td>{{ this.supplementaryCardFee}}</td>
+        <td>{{ this.cardReplacementFee}}</td>
+        <td>{{ this.pinReplacementFee}}</td>
+        <td>{{ this.cashAdvanceLimit}}</td>
+        <td>{{ this.cashAdvanceChargeLocal}}</td>
+        <td>{{ this.cashAdvanceChargeInternational}}</td>
+    </tr>
+    {{/each}}
+      
+    </tbody>
+  </table>
+    
+</div>

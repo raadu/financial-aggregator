@@ -10,12 +10,26 @@ var passport = require('passport');
 var LocalStrategy = require('passport-local').Strategy;
 var mongo = require('mongodb');
 var mongoose = require('mongoose');
-mongoose.connect('mongodb://localhost/fintech', { useNewUrlParser: true });
+mongoose.connect('mongodb://localhost/fintech', { useNewUrlParser: true }, (err) => {
+    if (!err) { console.log('MongoDB Connection Succeeded.') }
+    else { console.log('Error in DB connection : ' + err) }
+});
 mongoose.set('useCreateIndex', true);
 var db = mongoose.connection;
 
+
+// declare route for index.js file in routes folder
 var routes = require('./routes/index');
+// declare routes for other js files in routes folder
 var users = require('./routes/users');
+var creditcards = require('./routes/creditcards');
+
+// use declared route variables above
+app.use('/', routes); //for index.js file in routes folder
+app.use('/users', users); //for users.js file
+app.use('/creditcards', creditcards); //for creditCards.js file
+
+
 
 //init app
 var app = express();
@@ -74,8 +88,9 @@ app.use(function (req, res, next) {
   next();
 });
 
-app.use('/', routes);
-app.use('/users', users);
+
+
+
 
 // Set Port
 app.set('port', (process.env.PORT || 3000));
