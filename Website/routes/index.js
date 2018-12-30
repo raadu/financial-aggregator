@@ -11,4 +11,9 @@ router.get('/about', function(req, res){
 	res.render('about');
 });
 
+//Get Contact Us page
+router.get('/contact', function(req, res){
+	res.render('contact');
+});
+
 module.exports = router;
