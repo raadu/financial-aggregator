@@ -24,12 +24,6 @@ var routes = require('./routes/index');
 var users = require('./routes/users');
 var creditcards = require('./routes/creditcards');
 
-// use declared route variables above
-app.use('/', routes); //for index.js file in routes folder
-app.use('/users', users); //for users.js file
-app.use('/creditcards', creditcards); //for creditCards.js file
-
-
 
 //init app
 var app = express();
@@ -88,8 +82,10 @@ app.use(function (req, res, next) {
   next();
 });
 
-
-
+// using above declared route variables 
+app.use('/', routes); //for index.js file in routes folder
+app.use('/users', users); //for users.js file
+app.use('/creditcards', creditcards); //for creditCards.js file
 
 
 // Set Port
