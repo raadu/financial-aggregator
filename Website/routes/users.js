@@ -19,6 +19,11 @@ router.get('/login', function(req, res){
 	res.render('login');
 });
 
+//User Profile
+router.get('/profile', function(req, res){
+	res.render('profile');
+});
+
 //get data from mongodb
 // this router.get('location') leads to url: users/userlist
 router.get('/userlist', function(req, res, next) {

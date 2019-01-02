@@ -1,20 +1,20 @@
 <div class="container">
   <h2>Fixed Deposit List</h2>
   <br>            
-  <table class="table table-striped">
+  <table id="fdtable" class="table table-striped">
     <thead>
       <tr>
-        <th>Bank Name</th>
-        <th>1st Month</th>
-        <th>3rd Month</th>
-        <th>6th Month</th>
-        <th>1 Year</th>
-        <th>2 Years</th>
+        <th onclick="w3.sortHTML('#fdtable','.item', 'td:nth-child(1)')">Bank Name</th>
+        <th onclick="w3.sortHTML('#fdtable','.item', 'td:nth-child(2)')">1st Month</th>
+        <th onclick="w3.sortHTML('#fdtable','.item', 'td:nth-child(3)')">3rd Month</th>
+        <th onclick="w3.sortHTML('#fdtable','.item', 'td:nth-child(4)')">6th Month</th>
+        <th onclick="w3.sortHTML('#fdtable','.item', 'td:nth-child(5)')">1 Year</th>
+        <th onclick="w3.sortHTML('#fdtable','.item', 'td:nth-child(6)')">2 Years</th>
         <th></th>
       </tr>
     </thead>
     <tbody>
-      <tr>
+      <tr class="item">
         <td>AB Bank</td>
         <td>5%</td>
         <td>6%</td>
@@ -22,7 +22,7 @@
         <td>9%</td>
         <td>9%</td>
       </tr>
-      <tr>
+      <tr class="item">
         <td>Brac Bank</td>
         <td>3%</td>
         <td>6%</td>
@@ -30,7 +30,7 @@
         <td>7.5%</td>
         <td>8%</td>
       </tr>
-      <tr>
+      <tr class="item">
         <td>Dhaka Bank</td>
         <td>4%</td>
         <td>5.5%</td>
@@ -38,7 +38,7 @@
         <td>6%</td>
         <td>6%</td>
       </tr>
-      <tr>
+      <tr class="item">
         <td>Eastern Bank</td>
         <td>2.5%</td>
         <td>3.5%</td>
@@ -46,7 +46,7 @@
         <td>4%</td>
         <td>5%</td>
       </tr>
-      <tr>
+      <tr class="item">
         <td>National Bank</td>
         <td>6%</td>
         <td>6%</td>
@@ -54,7 +54,7 @@
         <td>8.5%</td>
         <td>8.5%</td>
       </tr>
-      <tr>
+      <tr class="item">
         <td>Southeast Bank</td>
         <td>4%</td>
         <td>6%</td>
@@ -62,7 +62,7 @@
         <td>7%</td>
         <td>7%</td>
       </tr>
-      <tr>
+      <tr class="item">
         <td>AB Bank</td>
         <td>5%</td>
         <td>6%</td>
@@ -70,7 +70,7 @@
         <td>9%</td>
         <td>9%</td>
       </tr>
-      <tr>
+      <tr class="item">
         <td>Brac Bank</td>
         <td>3%</td>
         <td>6%</td>
@@ -78,7 +78,7 @@
         <td>7.5%</td>
         <td>8%</td>
       </tr>
-      <tr>
+      <tr class="item">
         <td>Dhaka Bank</td>
         <td>4%</td>
         <td>5.5%</td>
@@ -86,7 +86,7 @@
         <td>6%</td>
         <td>6%</td>
       </tr>
-      <tr>
+      <tr class="item">
         <td>Eastern Bank</td>
         <td>2.5%</td>
         <td>3.5%</td>
@@ -94,7 +94,7 @@
         <td>4%</td>
         <td>5%</td>
       </tr>
-      <tr>
+      <tr class="item">
         <td>National Bank</td>
         <td>6%</td>
         <td>6%</td>
@@ -102,7 +102,7 @@
         <td>8.5%</td>
         <td>8.5%</td>
       </tr>
-      <tr>
+      <tr class="item">
         <td>Southeast Bank</td>
         <td>4%</td>
         <td>6%</td>
