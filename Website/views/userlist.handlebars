@@ -1,0 +1,27 @@
+<div class="container">
+  <h2>Credit Card List</h2>
+  <p></p>            
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th>User ID</th>
+        <th>User Name</th>
+        <th>Email</th>
+        <th>Mobile Number</th> 
+      </tr>
+    </thead>
+    <tbody>
+    	{{#each items}}
+      <tr class="item">
+        <td>{{ this._id}}</td>
+        <td>{{ this.username}}</td>
+        <td>{{ this.email}}</td>
+        <td>{{ this.mobile}}</td>
+        
+    </tr>
+    {{/each}}
+      
+    </tbody>
+  </table>
+    
+</div>

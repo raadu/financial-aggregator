@@ -15,6 +15,10 @@ var UserSchema = mongoose.Schema({
 	},
 	password: {
 		type: String
+	},
+
+	mobile: {
+		type: String
 	}
 	
 });
@@ -30,7 +34,7 @@ module.exports.createUser = function(newUser, callback){
 });
 }
 
-//Login model for user login by user email
+//Login model for user login by username
 module.exports.getUserByUsername = function(username, callback){
 	var query = {username: username};
 	User.findOne(query, callback);
