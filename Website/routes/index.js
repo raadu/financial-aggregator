@@ -17,9 +17,9 @@ router.get('/contact', function(req, res){
 });
 
 //Get Loan List page
-router.get('/loanlist', function(req, res){
+/* router.get('/loanlist', function(req, res){
 	res.render('loanlist');
-});
+}); */
 
 //Get Fixed Deposit List page
 router.get('/fixeddepositlist', function(req, res){

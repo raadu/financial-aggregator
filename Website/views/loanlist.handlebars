@@ -1,115 +1,40 @@
 <div class="container">
-  <h2>Bank Loan List</h2>
-  <br>            
+  <h2>Bank Loans List</h2>
+  <p></p>            
   <table id="loantable" class="table table-striped">
     <thead>
       <tr>
-        <th onclick="w3.sortHTML('#loantable','.item', 'td:nth-child(1)')">Bank Name</th>
-        <th onclick="w3.sortHTML('#loantable','.item', 'td:nth-child(2)')">Interest Rate</th>
-        <th onclick="w3.sortHTML('#loantable','.item', 'td:nth-child(3)')">EMI</th>
-        <th onclick="w3.sortHTML('#loantable','.item', 'td:nth-child(4)')">Total Payable Interest</th>
-        <th onclick="w3.sortHTML('#loantable','.item', 'td:nth-child(5)')">Minimum Loan</th>
-        <th onclick="w3.sortHTML('#loantable','.item', 'td:nth-child(6)')">Maximum Loan</th>
-        <th></th>
+        <th>Bank Name</th>
+        <th>Loan Type</th>
+        <th>Interest Rate</th>
+        <th>Minimum Amount (BDT)</th>
+        <th>Minimum Amount (BDT)</th>
+        <th>Eligible Age</th>
+        <th>Tenure</th>
+        <th>Minimum Income</th>
+        <th>Processing Fee</th>
+        <th>Floating Rate</th>
       </tr>
     </thead>
     <tbody>
+      {{#each items}}
       <tr class="item">
-        <td>DBBL</td>
-        <td>9%</td>
-        <td>4977 BDT</td>
-        <td>38,896 BDT</td>
-        <td>5,00,000 BDT</td>
-        <td>12,00,0000 BDT</td>
-      </tr>
-      <tr class="item">
-        <td>Standard Chartered</td>
-        <td>9.5%</td>
-        <td>5025 BDT</td>
-        <td>41,200 BDT</td>
-        <td>5,00,000 BDT</td>
-        <td>12,00,0000 BDT</td>
-      </tr>
-      <tr class="item">
-        <td>Brac Bank</td>
-        <td>10%</td>
-        <td>5073 BDT</td>
-        <td>43,504 BDT</td>
-        <td>5,00,000 BDT</td>
-        <td>12,00,0000 BDT</td>
-      </tr>
-      <tr class="item">
-        <td>UCB</td>
-        <td>10.5%</td>
-        <td>5121 BDT</td>
-        <td>45,808 BDT</td>
-        <td>5,00,000 BDT</td>
-        <td>12,00,0000 BDT</td>
-      </tr>
-      <tr class="item">
-        <td>IFIC Bank</td>
-        <td>10.75%</td>
-        <td>5145 BDT</td>
-        <td>46,940 BDT</td>
-        <td>5,00,000 BDT</td>
-        <td>12,00,0000 BDT</td>
-      </tr>
-      <tr class="item">
-        <td>IPDC</td>
-        <td>10.99%</td>
-        <td>5168 BDT</td>
-        <td>48,064 BDT</td>
-        <td>5,00,000 BDT</td>
-        <td>12,00,0000 BDT</td>
-      </tr>
-      <tr class="item">
-        <td>DBBL</td>
-        <td>9%</td>
-        <td>4977 BDT</td>
-        <td>38,896 BDT</td>
-        <td>5,00,000 BDT</td>
-        <td>12,00,0000 BDT</td>
-      </tr>
-      <tr class="item">
-        <td>Standard Chartered</td>
-        <td>9.5%</td>
-        <td>5025 BDT</td>
-        <td>41,200 BDT</td>
-        <td>5,00,000 BDT</td>
-        <td>12,00,0000 BDT</td>
-      </tr>
-      <tr class="item">
-        <td>Brac Bank</td>
-        <td>10%</td>
-        <td>5073 BDT</td>
-        <td>43,504 BDT</td>
-        <td>5,00,000 BDT</td>
-        <td>12,00,0000 BDT</td>
-      </tr>
-      <tr class="item">
-        <td>UCB</td>
-        <td>10.5%</td>
-        <td>5121 BDT</td>
-        <td>45,808 BDT</td>
-        <td>5,00,000 BDT</td>
-        <td>12,00,0000 BDT</td>
-      </tr>
-      <tr class="item">
-        <td>IFIC Bank</td>
-        <td>10.75%</td>
-        <td>5145 BDT</td>
-        <td>46,940 BDT</td>
-        <td>5,00,000 BDT</td>
-        <td>12,00,0000 BDT</td>
-      </tr>
-      <tr class="item">
-        <td>IPDC</td>
-        <td>10.99%</td>
-        <td>5168 BDT</td>
-        <td>48,064 BDT</td>
-        <td>5,00,000 BDT</td>
-        <td>12,00,0000 BDT</td>
-      </tr>
+        <td>{{ this.bankName}}</td>
+        <td>{{ this.loanType}}</td>
+        <td>{{ this.interestRate}}</td>
+        <td>{{ this.minLoanAmount}}</td>
+        <td>{{ this.maxLoanAmount}}</td>
+        <td>{{ this.eligibleAgeAll}}</td>
+        <td>{{ this.loanTenureAll}}</td>
+        <td>{{ this.minIncome}}</td>
+        <td>{{ this.processingFee}}</td>
+        <td>{{ this.floatingRate}}</td>
+    </tr>
+    {{/each}}
+      
     </tbody>
+
+    
   </table>
+
 </div>
