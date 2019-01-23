@@ -1,0 +1,42 @@
+<div class="container">
+  <h2>Bank Loans List</h2>
+  <p></p>            
+  <table id="fdstable" class="table table-striped">
+    <thead>
+      <tr>
+        <th>Bank Name</th>
+        <th>Deposit Type</th>
+        <th>Amount</th>
+        <th>1 Month</th>
+        <th>3 Months</th>
+        <th>4 Months</th>
+        <th>6 Months</th>
+        <th>9 Months</th>
+        <th>1 Year</th>
+        <th>2 Years</th>
+        <th>3 Years</th>
+      </tr>
+    </thead>
+    <tbody>
+      {{#each items}}
+      <tr class="item">
+        <td>{{ this.bankName}}</td>
+        <td>{{ this.depositType}}</td>
+        <td>{{ this.amount}}</td>
+        <td>{{ this.1month}}</td>
+        <td>{{ this.3months}}</td>
+        <td>{{ this.4months}}</td>
+        <td>{{ this.6months}}</td>
+        <td>{{ this.9months}}</td>
+        <td>{{ this.1year}}</td>
+        <td>{{ this.2year}}</td>
+        <td>{{ this.3year}}</td>
+    </tr>
+    {{/each}}
+      
+    </tbody>
+
+    
+  </table>
+
+</div>

@@ -24,6 +24,7 @@ var routes = require('./routes/index');
 var users = require('./routes/users');
 var creditcards = require('./routes/creditcards');
 var loans = require('./routes/loans');
+var fds = require('./routes/fds');
 
 
 //init app
@@ -88,6 +89,7 @@ app.use('/', routes); //for index.js file in routes folder
 app.use('/users', users); //for users.js file
 app.use('/creditcards', creditcards); //for creditCards.js file
 app.use('/loans', loans); //for loans.js file
+app.use('/fds', fds); //for fds.js file
 
 
 // Set Port
