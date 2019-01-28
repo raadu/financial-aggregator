@@ -1,4 +1,66 @@
 <div class="container">
+  <h2>Credit Cards</h2>
+  <br>
+</div>
+
+{{#each items}}
+
+<div class="container">
+  
+  <div class="row equal">
+    <div class="col-xs-6 col-sm-3" style="background-color:lavender;">
+      <h3>{{this.bankName}}</h3>
+    <hr>
+    <p><img src="http://www.stickpng.com/assets/images/5a1d2dc54ac6b00ff574e292.png" width="180px"></p>
+    <p>Short term: {{this.bankRatingShort}}
+    <br>Long term: {{this.bankRatingLong}}
+    </p>    
+  </div>
+    <div class="col-xs-6 col-sm-3" style="background-color:skyblue;">
+      <h3>{{this.cardType}}</h3>
+    <hr>
+    <p><img src="http://www.pngall.com/wp-content/uploads/2017/05/Visa-Logo-Free-Download-PNG.png" width="100px"><br>
+    </p>
+    <p>{{this.cardName}}</p> <br>
+  </div>
+    <div class="clearfix visible-xs"></div>
+     <div class="col-xs-6 col-sm-3" style="background-color:lightgray;">
+      <h3>Charges</h3>
+      <hr>
+      <p class="" >
+        Interest Rate (Monthly): {{this.interestRateMonthly}}<br>
+        Annual Fee: {{this.annualFee}}<br>
+        Late Payment Fee: {{this.latePaymentFee}}<br>
+        Over Limit Charge: {{this.overLimitCharge}}<br>
+        Cash Advance Limit: {{this.cashAdvanceLimit}}<br>
+        Supplimentary Card: {{this.numberOfSupplementaryCard}}<br>
+        Supplimentary Card Fee: {{this.supplementaryCardFee}}<br>
+        Card Replacement Fee: {{this.cardReplacementFee}}      
+      </p>
+    
+ 
+  </div>
+ 
+  
+    <div class="col-xs-6 col-sm-3" style="background-color:silver;">
+      <h3>Rating</h3>
+      <hr>
+      <br>
+      <button type="button" class="btn btn-default">Rate This</button><br>
+      <br>
+      <button type="button" class="btn btn-action">Get This Card</button><br>
+      <br>
+      <br>
+    </div>
+  </div>
+</div>
+
+ {{/each}}
+
+
+
+
+<!-- <div class="container">
   <h2>Credit Card List</h2>
   <p></p>            
   <table id="cardtable" class="table table-striped">
@@ -35,7 +97,10 @@
     
   </table>
 
+-->  
+
 <!-- script js for sorting -->
+<!-- 
  <script>
 function sortTable(n) {
   var table, rows, switching, i, x, y, shouldSwitch, dir, switchcount = 0;
@@ -95,3 +160,5 @@ function sortTable(n) {
 
     
 </div>
+
+-->
