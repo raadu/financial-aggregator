@@ -1,4 +1,173 @@
 <div class="container">
+  <h2>Loans</h2>
+  <br>
+</div>
+
+{{#each items}}
+
+<div class="container-fluid" style="margin-bottom:15px; margin-top:15px ;margin-left: 25px; margin-right: 25px" >
+  
+  <div class="row equal">
+    
+    <div class="col-xs-5 col-sm-1" style="background-color:#E6E6E6;">
+      <h3>{{this.bankName}}</h3>
+    <hr>
+    <p><img src="/images/banklogo.jpg" width="250px"></p>
+    <p>Short term: {{this.bankRatingShort}}
+    <br>Long term: {{this.bankRatingLong}}
+    </p>    
+  </div>
+    
+    <div class="col-xs-5 col-sm-1" style="background-color:#D8D8D8;">
+      <h3>{{this.loanType}}</h3>
+    <hr>
+    <p><img src="/images/cardlogo.jpg" width="220px"><br>
+    </p>
+    <h3>Interest Rate</h3>
+    <h4>{{this.interestRate}}</h4> <br>
+  </div>
+
+  <div class="col-xs-5 col-sm-1" style="background-color:#D8D8D8;">
+      <h3>{{this.loanType}}</h3>
+    <hr>
+    <p><img src="/images/cardlogo.jpg" width="220px"><br>
+    </p>
+    <h3>Interest Rate</h3>
+    <h4>{{this.interestRate}}</h4> <br>
+  </div>
+
+  <div class="col-xs-5 col-sm-1" style="background-color:#D8D8D8;">
+      <h3>{{this.loanType}}</h3>
+    <hr>
+    <p><img src="/images/cardlogo.jpg" width="220px"><br>
+    </p>
+    <h3>Interest Rate</h3>
+    <h4>{{this.interestRate}}</h4> <br>
+  </div>
+
+  <div class="col-xs-5 col-sm-1" style="background-color:#D8D8D8;">
+      <h3>{{this.loanType}}</h3>
+    <hr>
+    <p><img src="/images/cardlogo.jpg" width="220px"><br>
+    </p>
+    <h3>Interest Rate</h3>
+    <h4>{{this.interestRate}}</h4> <br>
+  </div>
+
+  <div class="col-xs-5 col-sm-1" style="background-color:#D8D8D8;">
+      <h3>{{this.loanType}}</h3>
+    <hr>
+    <p><img src="/images/cardlogo.jpg" width="220px"><br>
+    </p>
+    <h3>Interest Rate</h3>
+    <h4>{{this.interestRate}}</h4> <br>
+  </div>
+
+  <div class="col-xs-5 col-sm-1" style="background-color:#D8D8D8;">
+      <h3>{{this.loanType}}</h3>
+    <hr>
+    <p><img src="/images/cardlogo.jpg" width="220px"><br>
+    </p>
+    <h3>Interest Rate</h3>
+    <h4>{{this.interestRate}}</h4> <br>
+  </div>
+
+  <div class="col-xs-5 col-sm-1" style="background-color:#D8D8D8;">
+      <h3>{{this.loanType}}</h3>
+    <hr>
+    <p><img src="/images/cardlogo.jpg" width="220px"><br>
+    </p>
+    <h3>Interest Rate</h3>
+    <h4>{{this.interestRate}}</h4> <br>
+  </div>
+
+  <div class="col-xs-5 col-sm-1" style="background-color:#D8D8D8;">
+      <h3>{{this.loanType}}</h3>
+    <hr>
+    <p><img src="/images/cardlogo.jpg" width="220px"><br>
+    </p>
+    <h3>Interest Rate</h3>
+    <h4>{{this.interestRate}}</h4> <br>
+  </div>
+
+  <div class="col-xs-5 col-sm-1" style="background-color:#D8D8D8;">
+      <h3>{{this.loanType}}</h3>
+    <hr>
+    <p><img src="/images/cardlogo.jpg" width="220px"><br>
+    </p>
+    <h3>Interest Rate</h3>
+    <h4>{{this.interestRate}}</h4> <br>
+  </div>
+
+    
+  
+    <div class="col-xs-5 col-sm-2" style="background-color:#6E6E6E;">
+      <h3>Rating</h3>
+      <hr>
+      <br>
+      <button type="button" class="btn btn-default">Rate This</button><br>
+      <br>
+      <button type="button" class="btn btn-action">Get This Loan</button><br>
+      <br>
+      <br>
+    </div>
+  </div>
+</div>
+
+ {{/each}}
+
+
+
+
+<!-- COMMENTING OUT
+
+<div class="container">
+  <h2>Bank Loans List</h2>
+  <p></p>            
+  <table id="loantable" class="table table-striped">
+    <thead>
+      <tr>
+        <th>Bank Name</th>
+        <th>Loan Type</th>
+        <th>Interest Rate</th>
+        <th>Minimum Amount (BDT)</th>
+        <th>Minimum Amount (BDT)</th>
+        <th>Eligible Age</th>
+        <th>Tenure</th>
+        <th>Minimum Income</th>
+        <th>Processing Fee</th>
+        <th>Floating Rate</th>
+      </tr>
+    </thead>
+    <tbody>
+      {{#each items}}
+      <tr class="item">
+        <td>{{ this.bankName}}</td>
+        <td>{{ this.loanType}}</td>
+        <td>{{ this.interestRate}}</td>
+        <td>{{ this.minLoanAmount}}</td>
+        <td>{{ this.maxLoanAmount}}</td>
+        <td>{{ this.eligibleAgeAll}}</td>
+        <td>{{ this.loanTenureAll}}</td>
+        <td>{{ this.minIncome}}</td>
+        <td>{{ this.processingFee}}</td>
+        <td>{{ this.floatingRate}}</td>
+    </tr>
+    {{/each}}
+      
+    </tbody>
+
+    
+  </table>
+
+</div>
+
+-->
+
+
+<!-- COMMENTING OUT
+
+ <div class="container">
   <h2>Bank Loans List</h2>
   <p></p>            
   <table id="fdstable" class="table table-striped">
@@ -20,7 +189,7 @@
     <tbody>
       {{#each items}}
       <tr class="item">
-        <td>{{ this.bankName}}</td>
+        <td>{{ this.bankName}} <img src="https://proxy.duckduckgo.com/iu/?u=http%3A%2F%2Fwww.cbm.org%2Farticle%2Fimages%2F5739385_344e65c047.jpg&f=1" width="100px"></td>
         <td>{{ this.depositType}}</td>
         <td>{{ this.amount}}</td>
         <td>{{ this.1month}}</td>
@@ -40,3 +209,5 @@
   </table>
 
 </div>
+
+-->
