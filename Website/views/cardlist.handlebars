@@ -3,6 +3,58 @@
   <br>
 </div>
 
+<div class="container">
+  <div class="row">
+    
+    <div class="col-sm-2">
+      <h3>Sort By</h3>
+    </div>
+
+    <div class="col-sm-2">
+      <button type="button" class="btn btn-default" onclick="location.href='/creditcards/sortByInterestRate' ">Interest Rate</button>
+    </div>
+
+    <div class="col-sm-2">
+      <button type="button" class="btn btn-default" onclick="location.href='/creditcards/sortByAnnualFee' ">Annual Fee</button>
+    </div>
+
+    <div class="col-sm-2">
+       <div class="dropdown">
+        <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">Bank Name<span class="caret"></span></button>
+          <ul class="dropdown-menu">
+            <li><a href="/creditcards/citybank">City Bank</a></li>
+            <li><a href="/creditcards/standardchartered">Standard Chartered</a></li>
+            <li><a href="/creditcards/bracbank">Brac Bank</a></li>
+            <li><a href="/creditcards/abbank">AB Bank</a></li>
+            <li><a href="/creditcards/dbbl">Dutch Bangla Bank</a></li>
+            <li><a href="/creditcards/onebank">One Bank</a></li>
+            <li><a href="/creditcards/primebank">Prime Bank</a></li>
+            <li><a href="/creditcards/easternbank">Eastern Bank</a></li>
+            <li><a href="/creditcards/southeastbank">South East Bank</a></li>
+            <li><a href="/creditcards/nationalbank">National Bank</a></li>
+          </ul>
+        </div> 
+    </div>
+
+    <div class="col-sm-2">
+       <div class="dropdown">
+        <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">Card Type<span class="caret"></span></button>
+          <ul class="dropdown-menu">
+            <li><a href="/creditcards/visa">Visa</a></li>
+            <li><a href="/creditcards/mastercard">Master Card</a></li>
+            <li><a href="/creditcards/americanexpress">American Express</a></li>
+            <li><a href="/creditcards/debit">Debit Card</a></li>
+            <li><a href="/creditcards/prepaid">Prepaid Card</a></li>
+            <li><a href="/creditcards/special">Special Card</a></li>
+            
+          </ul>
+        </div> 
+    </div>
+
+  
+  </div>
+</div>
+
 {{#each items}}
 
 <div class="container" style="margin-bottom:15px; margin-top:15px">
