@@ -3,6 +3,55 @@
   <br>
 </div>
 
+<div class="container">
+  <div class="row">
+    
+    <div class="col-sm-2">
+      <h3>Sort By</h3>
+    </div>
+
+    <div class="col-sm-2">
+      <button type="button" class="btn btn-default" onclick="location.href='/loans/loanbyInterestRate' ">Interest Rate</button>
+    </div>
+
+    <div class="col-sm-2">
+       <div class="dropdown">
+        <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">Bank Name<span class="caret"></span></button>
+          <ul class="dropdown-menu">
+            <li><a href="/loans/citybank">City Bank</a></li>
+            <li><a href="/loans/standardchartered">Standard Chartered</a></li>
+            <li><a href="/loans/bracbank">Brac Bank</a></li>
+            <li><a href="/loans/abbank">AB Bank</a></li>
+            <li><a href="/loans/dbbl">Dutch Bangla Bank</a></li>
+            <li><a href="/loans/onebank">One Bank</a></li>
+            <li><a href="/loans/primebank">Prime Bank</a></li>
+            <li><a href="/loans/easternbank">Eastern Bank</a></li>
+            <li><a href="/loans/southeastbank">South East Bank</a></li>
+            <li><a href="/loans/nationalbank">National Bank</a></li>
+          </ul>
+        </div> 
+    </div>
+
+    <div class="col-sm-2">
+       <div class="dropdown">
+        <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">Loan Type<span class="caret"></span></button>
+          <ul class="dropdown-menu">
+            <li><a href="/loans/homeloan">Home Loan</a></li>
+            <li><a href="/loans/autoloan">Auto Loan</a></li>
+            <li><a href="/loans/personalloan">Personal Loan</a></li>
+            <li><a href="/loans/holidayloan">Holiday Loan</a></li>
+            <li><a href="/loans/studentloan">Student Loan</a></li>
+            <li><a href="/loans/womensloan">Women's Loan</a></li>
+            <li><a href="/loans/executiveloan">Executive Loan</a></li>
+            <li><a href="/loans/doctorsloan">Doctor's Loan</a></li>
+            <li><a href="/loans/retailloan">Retail Secured EMI</a></li>
+
+          </ul>
+        </div> 
+    </div>
+  </div>
+</div>
+
 {{#each items}}
 
 <div class="container" style="margin-bottom:15px; margin-top:15px">
