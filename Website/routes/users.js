@@ -52,7 +52,7 @@ router.post('/register', function(req, res){
 	var password = req.body.password;
 	var mobile = req.body.mobile;
 	
-	//Validation
+//Validation
 	req.checkBody('username','Username is required').notEmpty();
 	req.checkBody('email','Email is required').notEmpty();
 	req.checkBody('email','Email is not valid').isEmail();
