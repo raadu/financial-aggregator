@@ -19,7 +19,12 @@ var UserSchema = mongoose.Schema({
 
 	mobile: {
 		type: String
+	},
+
+	fullname: {
+		type: String
 	}
+
 	
 });
 

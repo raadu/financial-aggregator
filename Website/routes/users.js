@@ -41,6 +41,47 @@ router.get('/userlist', function(req, res, next) {
   });
 });
 
+//Show editprofile
+router.get('/editprofile', function(req, res){
+	res.render('editprofile');
+});
+
+//Edit User Profile
+router.post('/editprofile', function(req, res, next){
+
+    User.findById(req.user.id, function (err, user) {
+
+        // todo: don't forget to handle err
+
+        if (!user) {
+            req.flash('error', 'No account found');
+            return res.redirect('/editprofile');
+        }
+
+        // good idea to trim 
+        var mobile = req.body.mobile.trim();
+        var fullname = req.body.fullname.trim();
+
+        // validate 
+        if (!mobile || !fullname) { // simplified: '' is a falsey
+            req.flash('error', 'One or more fields are empty');
+            return res.redirect('/editprofile'); // modified
+        }
+
+        // no need for else since you are returning early ^
+        user.mobile = mobile;
+        user.fullname = fullname;
+        
+        // don't forget to save!
+        user.save(function (err) {
+
+            // todo: don't forget to handle err
+
+            res.redirect('/users/editprofile');
+        });
+    });
+});
+
 
 
 
@@ -51,6 +92,7 @@ router.post('/register', function(req, res){
 	var email = req.body.email;
 	var password = req.body.password;
 	var mobile = req.body.mobile;
+	
 	
 //Validation
 	req.checkBody('username','Username is required').notEmpty();
@@ -74,6 +116,7 @@ router.post('/register', function(req, res){
 			email: email,
 			password: password,
 			mobile: mobile
+			
 		});
 
 		User.createUser(newUser, function (err, user) {

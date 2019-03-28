@@ -8,6 +8,10 @@ var flash = require('connect-flash');
 var session = require('express-session');
 var passport = require('passport');
 var LocalStrategy = require('passport-local').Strategy;
+var multer = require('multer');
+var GridFsStorage = require('multer-gridfs-storage');
+var Grid = require('gridfs-stream');
+var methodOverride = require('method-override');
 var mongo = require('mongodb');
 var mongoose = require('mongoose');
 mongoose.connect('mongodb://localhost/fintech', { useNewUrlParser: true }, (err) => {
@@ -16,6 +20,34 @@ mongoose.connect('mongodb://localhost/fintech', { useNewUrlParser: true }, (err)
 });
 mongoose.set('useCreateIndex', true);
 var db = mongoose.connection;
+
+//GridFS file upload codes
+// Init gfs
+let gfs;
+
+db.once('open', () => {
+  // Init stream
+  gfs = Grid(db.db, mongoose.mongo);  
+  gfs.collection('uploads');
+});
+
+// Create storage engine
+const storage = new GridFsStorage({
+  url: 'mongodb://localhost/fintech', 
+  file: (req, file) => {
+    return new Promise((resolve, reject) => {
+        const filename = file.originalname;
+        const fileInfo = {
+          filename: filename,
+          bucketName: 'uploads'
+        };
+        resolve(fileInfo);
+    });
+  }
+});
+
+const upload = multer({ storage });
+//GridFS code ends
 
 
 // declare route for index.js file in routes folder
