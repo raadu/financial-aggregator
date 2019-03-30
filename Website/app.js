@@ -21,6 +21,8 @@ mongoose.connect('mongodb://localhost/fintech', { useNewUrlParser: true }, (err)
 mongoose.set('useCreateIndex', true);
 var db = mongoose.connection;
 
+/* COMMENTING OUT GRIDFS FILE/PICTURE UPLOAD CODES
+
 //GridFS file upload codes
 // Init gfs
 let gfs;
@@ -48,6 +50,8 @@ const storage = new GridFsStorage({
 
 const upload = multer({ storage });
 //GridFS code ends
+
+*/
 
 
 // declare route for index.js file in routes folder

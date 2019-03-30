@@ -23,7 +23,65 @@ var UserSchema = mongoose.Schema({
 
 	fullname: {
 		type: String
+	},
+
+	profession: {
+		type: String
+	},
+
+	workplace: {
+		type: String
+	},
+
+	designation: {
+		type: String
+	},
+
+	salary: {
+		type: Number
+	},
+
+	jobexperience: {
+		type: String
+	},
+
+	gender: {
+		type: String
+	},
+
+	age: {
+		type: Number
+	},
+
+	jobsituation: {
+		type: String
+	},
+
+	home: {
+		type: String
+	},
+
+	address: {
+		type: String
+	},
+
+	nid: {
+		type: String
+	},
+
+	passport: {
+		type: String
+	},
+
+	loans: {
+		type: String
+	},
+
+	creditcards: {
+		type: String
 	}
+
+
 
 	
 });

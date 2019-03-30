@@ -1,18 +1,103 @@
+<div class="container">
 <form method="post" action="/users/editprofile">
-          <div class="form-group">
-                  <label>Mobile Number <span class="text-danger">*</span></label>
-                  <input type="number" class="form-control" name="mobile">
-                </div>
-
+           
           <div class="form-group">
                   <label>Full Name <span class="text-danger">*</span></label>
-                  <input type="text" class="form-control" name="fullname">
-                </div>
+                  <input type="text" class="form-control" name="fullname" required>
+          </div>
 
-                <div class="row">
+          <div class="form-group">
+                  <label>Gender</label><br>
+                  <input type="radio" class="form-control" name="gender" value="Male"> Male<br>
+                  <input type="radio" class="form-control" name="gender" value="Female"> Female<br>
+                  <input type="radio" class="form-control" name="gender" value="Other"> Other
+          </div>
+
+          <div class="form-group">
+                  <label>Age</label><br>
+                  <input type="number" class="form-control" name="age" required>
+          </div>
+
+          <div class="form-group">
+                  <label>Profession</label><br>
+                  <input type="radio"  class="form-control" name="profession" value="Job holder"> Job 
+                  <input type="radio" class="form-control" name="profession" value="Business"> Business
+                  <input type="radio" class="form-control" name="profession" value="Both"> Both
+          </div>
+
+          <div class="form-group">
+                  <label>Work Place</label>
+                  <input type="text" class="form-control" name="workplace" required>
+          </div>
+
+          <div class="form-group">
+                  <label>Designation</label>
+                  <input type="text" class="form-control" name="designation" required>
+          </div>
+
+          <div class="form-group">
+                  <label>Salary</label>
+                  <input type="number" class="form-control" name="salary" required>
+          </div>
+
+          <div class="form-group">
+                  <label>Job Experience(in years)</label>
+                  <input type="text" class="form-control" name="jobexperience" required>
+          </div>
+
+          <div class="form-group">
+                  <label>Job Situation</label><br>
+                  <input type="checkbox" class="form-control" name="jobsituation" value="Permanent">Permanent<br>
+                  <input type="checkbox" class="form-control" name="jobsituation" value="Temporary">Temporary
+          </div>
+
+          <div class="form-group">
+                  <label>Currently Living in?</label><br>
+                  <input type="checkbox" class="form-control" name="home" value="Owned">Owned Home<br>
+                  <input type="checkbox" class="form-control" name="home" value="Rented">Rented Home
+          </div>
+
+          <div class="form-group">
+                  <label>Address</label>
+                  <input type="text" class="form-control" name="address" required>
+          </div>
+
+          <div class="form-group">
+                  <label>Mobile Number <span class="text-danger">*</span></label>
+                  <input type="number" class="form-control" name="mobile" required>
+          </div>
+
+          <div class="form-group">
+                  <label>NID Number</label>
+                  <input type="text" class="form-control" name="nid" required>
+          </div>
+
+          <div class="form-group">
+                  <label>Passport Number(if no NID)</label>
+                  <input type="text" class="form-control" name="passport" required>
+          </div>
+
+          <div class="form-group">
+                  <label>Do you have any Loans?</label><br>
+                  <input type="checkbox" class="form-control" name="loans" value="Yes">Yes<br>
+                  <input type="checkbox" class="form-control" name="loans" value="No">No
+          </div>
+          
+          <div class="form-group">
+                <label>Do you have any Credit Cards?</label><br>
+                <input type="checkbox" class="form-control" name="creditcards" value="Yes">Yes<br>
+                <input type="checkbox" class="form-control" name="creditcards" value="No">No
+          </div>
+
+          <div class="row">
                   <div class="col-lg-8">
-                    <br><button class="btn btn-dafault" type="submit">Register</button>
+                    <br><button class="btn btn-dafault" type="submit">Update</button>
                   </div>
-                </div>
+          </div>
 </form>
+</div>
+
+
+
+
         

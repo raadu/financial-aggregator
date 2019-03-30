@@ -61,9 +61,25 @@ router.post('/editprofile', function(req, res, next){
         // good idea to trim 
         var mobile = req.body.mobile.trim();
         var fullname = req.body.fullname.trim();
+        var profession = req.body.profession.trim();
+        var workplace = req.body.workplace.trim();
+        var designation = req.body.designation.trim();
+        var salary = req.body.salary.trim();
+        var jobexperience = req.body.jobexperience.trim();
+        var gender = req.body.gender.trim();
+        var age = req.body.age.trim();
+        var jobsituation = req.body.jobsituation.trim();
+        var home = req.body.home.trim();
+        var address = req.body.address.trim();
+        var nid = req.body.nid.trim();
+        var passport = req.body.passport.trim();
+        var loans = req.body.loans.trim();
+        var creditcards = req.body.creditcards.trim();
+
 
         // validate 
-        if (!mobile || !fullname) { // simplified: '' is a falsey
+        if (!mobile || !fullname || !profession || !workplace || !designation || !salary || !jobexperience || !gender || !age
+        || !age ||!jobsituation ||!home ||!address ||!nid ||!passport ||!loans ||!creditcards) { // simplified: '' is a falsey
             req.flash('error', 'One or more fields are empty');
             return res.redirect('/editprofile'); // modified
         }
@@ -71,6 +87,20 @@ router.post('/editprofile', function(req, res, next){
         // no need for else since you are returning early ^
         user.mobile = mobile;
         user.fullname = fullname;
+        user.profession = profession;
+        user.workplace = workplace;
+        user.designation = designation;
+        user.salary = salary;
+        user.jobexperience = jobexperience;
+        user.gender = gender;
+        user.age = age;
+        user.jobsituation = jobsituation;
+        user.home = home;
+        user.address = address;
+        user.nid = nid;
+        user.passport = passport;
+        user.loans = loans;
+        user.creditcards = creditcards;
         
         // don't forget to save!
         user.save(function (err) {
