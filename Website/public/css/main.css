@@ -1,11 +1,11 @@
 /* Header */
 
 #head {
-    background: #181015 url(../images/bg_header.jpg) no-repeat;
+    background: #181015 url(../images/bg_header.gif) no-repeat;
     background-size: cover;
     min-height: 520px;
     text-align: center;
-    padding-top: 240px;
+    padding-top: 160px;
     color: white;
     font-family: "Open sans", Helvetica, Arial;
     font-weight: 300;

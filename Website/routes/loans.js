@@ -27,6 +27,12 @@ router.get('/loanlist', function(req, res, next) {
   });
 });
 
+//Loans Aggregation form page
+router.get('/loanform', function(req, res){
+  res.render('loanform');
+});
+
+
 //LOANS SORTING STARTED FROM HERE
 
 //sort loans by Interest Rates
