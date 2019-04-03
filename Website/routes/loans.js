@@ -29,8 +29,30 @@ router.get('/loanlist', function(req, res, next) {
 
 //Loans Aggregation form page
 router.get('/result', function(req, res){
-  var tenure = req.query.loantenure;
-  res.send(tenure);
+  
+  var profession = req.query.profession;
+  var loanamount = req.query.loanamount;
+  var age = req.query.age;
+  var loantenure = req.query.loantenure;
+  //var lol = 1;
+  //res.send(loantenure);
+
+  var resultArray = [];
+  mongoose.connect(url, { useNewUrlParser: true }, function(err, db) {
+    assert.equal(null, err);
+    var query = {minLoanTenure: parseInt(loantenure)};
+    var cursor = db.collection('loans').find(query); //inside mongoDB, collection name in 'creditcards'
+    cursor.forEach(function(doc, err) {
+      assert.equal(null, err);
+      resultArray.push(doc);
+    }, function() {
+      db.close();
+      res.render('loanlist', {items: resultArray}); //rendered in 'cardlist.handlebars' view
+    });
+  });
+
+
+
 });
 
 router.get('/loanform', function(req, res){
