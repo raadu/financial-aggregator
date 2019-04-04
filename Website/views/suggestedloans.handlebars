@@ -1,0 +1,54 @@
+{{#each items}}
+
+<div class="container" style="margin-bottom:15px; margin-top:15px">
+  
+  <div class="row equal">
+    <div class="col-xs-6 col-sm-3" style="background-color:#E6E6E6;">
+      <h3><b>{{this.bankName}}</b></h3>
+    <hr>
+    <p><img src="/images/banklogo.jpg" width="250px"></p>
+    <h4>Short term: <i>{{this.bankRatingShort}}</i>
+    <br>Long term: <i>{{this.bankRatingLong}}</i>
+    </h4>    
+  </div>
+    <div class="col-xs-6 col-sm-3" style="background-color:#D8D8D8;">
+      <h3><b>{{this.loanType}}</b></h3>
+    <hr>
+    <p><img src="/images/cardlogo.jpg" width="220px"><br>
+    </p>
+    <h3>Interest Rate</h3>
+    <h4>{{this.interestRate}}</h4> <br>
+  </div>
+    <div class="clearfix visible-xs"></div>
+     <div class="col-xs-6 col-sm-3" style="background-color:#A4A4A4;">
+      <h3><b>Charges</b></h3>
+      <hr>
+      <p class="" >
+        Floating Rate: {{this.floatingRate}}<br>
+        Minimum Loan Amount: {{this.minLoanAmount}}<br>
+        Maximum Loan Amount: {{this.maxLoanAmount}}<br>
+        Maximum Tenure: {{this.maxLoanTenure}}<br>
+        Minimum Tenure: {{this.minLoanTenure}}<br>
+        Minimum Income: {{this.minIncome}}<br>
+        Processing Fee: {{this.processingFee}}<br>
+        Early Settlement Fee: {{this.earlySettlementFees}}      
+      </p>
+    
+ 
+  </div>
+ 
+  
+    <div class="col-xs-6 col-sm-3" style="background-color:#6E6E6E;">
+      <h3><b>Rating</b></h3>
+      <hr>
+      <br>
+      <button type="button" class="btn btn-default" style="margin-left: 10px;">Rate This</button><br>
+      <br>
+      <button type="button" class="btn btn-action">Get This Loan</button><br>
+      <br>
+      <br>
+    </div>
+  </div>
+</div>
+
+ {{/each}}

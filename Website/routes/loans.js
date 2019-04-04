@@ -47,7 +47,7 @@ router.get('/result', function(req, res){
       resultArray.push(doc);
     }, function() {
       db.close();
-      res.render('loanlist', {items: resultArray}); //rendered in 'cardlist.handlebars' view
+      res.render('suggestedloans', {items: resultArray}); //rendered in 'cardlist.handlebars' view
     });
   });
 
