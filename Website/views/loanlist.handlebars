@@ -9,6 +9,7 @@
     <div class="col-sm-2">
       <h3>Sort By</h3>
     </div>
+    <br>
 
     <div class="col-sm-2">
       <button type="button" class="btn btn-default" onclick="location.href='/loans/loanbyInterestRate' ">Interest Rate</button>
@@ -112,51 +113,3 @@
 </div>
 
  {{/each}}
-
-
-
-
-<!-- COMMENTING OUT
-
-<div class="container">
-  <h2>Bank Loans List</h2>
-  <p></p>            
-  <table id="loantable" class="table table-striped">
-    <thead>
-      <tr>
-        <th>Bank Name</th>
-        <th>Loan Type</th>
-        <th>Interest Rate</th>
-        <th>Minimum Amount (BDT)</th>
-        <th>Minimum Amount (BDT)</th>
-        <th>Eligible Age</th>
-        <th>Tenure</th>
-        <th>Minimum Income</th>
-        <th>Processing Fee</th>
-        <th>Floating Rate</th>
-      </tr>
-    </thead>
-    <tbody>
-      {{#each items}}
-      <tr class="item">
-        <td>{{ this.bankName}}</td>
-        <td>{{ this.loanType}}</td>
-        <td>{{ this.interestRate}}</td>
-        <td>{{ this.minLoanAmount}}</td>
-        <td>{{ this.maxLoanAmount}}</td>
-        <td>{{ this.eligibleAgeAll}}</td>
-        <td>{{ this.loanTenureAll}}</td>
-        <td>{{ this.minIncome}}</td>
-        <td>{{ this.processingFee}}</td>
-        <td>{{ this.floatingRate}}</td>
-    </tr>
-    {{/each}}
-      
-    </tbody>
-
-    
-  </table>
-
-</div>
-
--->

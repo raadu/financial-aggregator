@@ -21,7 +21,7 @@ router.get('/contact', function(req, res){
 	res.render('contact');
 });
 
-/* COMMENTING OUT CODES FOR FILE/PITURE UPLOAD
+/* COMMENTING OUT CODES FOR FILE/PICTURE UPLOAD
 
 //GridFS upload route
 router.post('/upload', multer().single('file'), (req, res) => {
