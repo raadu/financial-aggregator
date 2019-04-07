@@ -37,10 +37,15 @@ router.get('/result', function(req, res){
   //var lol = 1;
   //res.send(loantenure);
 
+
   var resultArray = [];
   mongoose.connect(url, { useNewUrlParser: true }, function(err, db) {
     assert.equal(null, err);
-    var query = {minLoanTenure: parseInt(loantenure)};
+    
+    var query = {minLoanAmount: {$lte: parseInt(loanamount)}, maxLoanAmount: {$gte: parseInt(loanamount)}, 
+    minEligibleAge: {$lte: parseInt(age)}, maxEligibleAge: {$gte: parseInt(age)},
+    minLoanTenure: {$lte: parseInt(loantenure)}, maxLoanTenure: {$gt: parseInt(loantenure)} };
+
     var cursor = db.collection('loans').find(query); //inside mongoDB, collection name in 'creditcards'
     cursor.forEach(function(doc, err) {
       assert.equal(null, err);
