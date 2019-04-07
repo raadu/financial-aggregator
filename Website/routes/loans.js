@@ -44,7 +44,7 @@ router.get('/result', function(req, res){
     
     var query = {minLoanAmount: {$lte: parseInt(loanamount)}, maxLoanAmount: {$gte: parseInt(loanamount)}, 
     minEligibleAge: {$lte: parseInt(age)}, maxEligibleAge: {$gte: parseInt(age)},
-    minLoanTenure: {$lte: parseInt(loantenure)}, maxLoanTenure: {$gt: parseInt(loantenure)} };
+    minLoanTenure: {$lte: parseInt(loantenure)}, maxLoanTenure: {$gte: parseInt(loantenure)} };
 
     var cursor = db.collection('loans').find(query); //inside mongoDB, collection name in 'creditcards'
     cursor.forEach(function(doc, err) {
