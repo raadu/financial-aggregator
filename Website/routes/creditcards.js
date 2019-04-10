@@ -28,11 +28,26 @@ router.get('/cardlist', function(req, res, next) {
 });
 
 //CARDS AGGREGATION STARTED FROM HERE
-router.get('/suggestedcards', function(req, res, next) {
+router.get('/cardresult', function(req, res){
+  
+  var age = req.query.age;
+  var monthlyincome = req.query.monthlyincome;
+  var lessannualfee = req.query.lessannualfee;
+  var lessmonthlyfee = req.query.lessmonthlyfee;
+  var lesslatefee = req.query.lesslatefee;
+
+
+
   var resultArray = [];
   mongoose.connect(url, { useNewUrlParser: true }, function(err, db) {
     assert.equal(null, err);
-    var cursor = db.collection('creditcards').find(); //inside mongoDB, collection name in 'creditcards'
+    
+    var query = {age: {$lte: parseInt(age)}, minIncome: {$lte: parseInt(monthlyincome)} };
+    var sort2 = {annualFeeHidden: parseInt(lessannualfee)};
+    var sort3 = {interestRateMonthlyHidden: parseInt(lessmonthlyfee)};
+    var sort4 = {latePaymentFeeHidden: parseInt(lesslatefee)};
+
+    var cursor = db.collection('creditcards').find(query).sort(sort2).sort(sort3).sort(sort4); //inside mongoDB, collection name in 'creditcards'
     cursor.forEach(function(doc, err) {
       assert.equal(null, err);
       resultArray.push(doc);
@@ -42,6 +57,12 @@ router.get('/suggestedcards', function(req, res, next) {
     });
   });
 });
+
+//CARD AGGREGATION FORM DISPLAY
+router.get('/cardform', function(req, res){
+  res.render('cardform');
+});
+
 
 
 //CARDS SORTING STARTED FROM HERE
@@ -69,7 +90,8 @@ router.get('/sortByAnnualFee', function(req, res, next) {
   mongoose.connect(url, { useNewUrlParser: true }, function(err, db) {
     assert.equal(null, err);
     var sort = {annualFee: 1};
-    var cursor = db.collection('creditcards').find().sort(sort); //inside mongoDB, collection name in 'creditcards'
+    var sort2 = {bankName: "City Bank"};
+    var cursor = db.collection('creditcards').find().sort(sort).sort(sort2); //inside mongoDB, collection name in 'creditcards'
     cursor.forEach(function(doc, err) {
       assert.equal(null, err);
       resultArray.push(doc);

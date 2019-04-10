@@ -1,0 +1,61 @@
+<div class="container">
+
+		<div class="row">
+							
+				<div class="col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2">
+					<div class="panel panel-default">
+						<div class="panel-body">
+							<h2 class="thin text-center">Credit Card Information </h2>
+		
+		<form method="GET" action="/creditcards/cardresult">
+
+      <div class="form-group">
+        <label>Age</label>
+        <input type="number" name="age" required> Years
+        <!-- <label>Age</label>
+        <select name="age">
+          <option value="less than 18">Less Than 18</option>
+          <option value="18-21">18-21</option>
+          <option value="22-25">22-25</option>
+          <option value="26-35">26-35</option>
+          <option value="35-70">35-70</option>
+        </select> -->
+      </div>
+        <hr>
+
+      <div class="form-group">
+        <label>Monthly Income</label>
+        <input type="number" name="monthlyincome" required> BDT
+      </div>
+        <hr>
+			
+			<div class="form-group">
+				<label>Select the facilities you want most</label>
+				<br>
+				<input type="checkbox"  name="lessannualfee" value="1"> Less Annual Fee <br>
+				<input type="checkbox" name="lessmonthlyfee" value="1"> Less Monthly Interest Rate <br>
+				<input type="checkbox" name="lesslatefee" value="1"> Less Late Payment Fee <br>	
+			</div>
+				<hr>
+
+
+			<div class="row">
+                  <div class="col-lg-8">
+                    <br><button class="btn btn-dafault" type="submit">Aggregate</button>
+                  </div>
+          </div>
+
+
+	</form>
+
+				</div>
+
+			</div>
+		</div>
+	</div>
+
+
+</div>
+
+
+

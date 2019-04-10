@@ -27,7 +27,7 @@ router.get('/loanlist', function(req, res, next) {
   });
 });
 
-//Loans Aggregation form page
+//LOANS AGGREGATION STARTED FROM HERE
 router.get('/result', function(req, res){
   
   var profession = req.query.profession;
@@ -55,11 +55,9 @@ router.get('/result', function(req, res){
       res.render('suggestedloans', {items: resultArray}); //rendered in 'cardlist.handlebars' view
     });
   });
-
-
-
 });
 
+//LOAN AGGREGATION FORM DISPLAY
 router.get('/loanform', function(req, res){
   res.render('loanform');
 });
