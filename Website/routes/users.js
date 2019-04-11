@@ -42,7 +42,20 @@ router.get('/userlist', function(req, res, next) {
 });
 
 //Retrieve logged in user profile info
-
+router.get('/profile', function(req, res, next) {
+  var resultArray = [];
+  mongoose.connect(url, { useNewUrlParser: true }, function(err, db) {
+    assert.equal(null, err);
+    var cursor = db.collection('users').find(); //inside mongoDB, collection name is 'users'
+    cursor.forEach(function(doc, err) {
+      assert.equal(null, err);
+      resultArray.push(doc);
+    }, function() {
+      db.close();
+      res.render('profile', {items: resultArray}); //rendered in 'cardlist.handlebars' view
+    });
+  });
+});
 
 //Show editprofile
 router.get('/editprofile', function(req, res){
