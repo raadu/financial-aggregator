@@ -1,14 +1,14 @@
 /*******************************/
 /*         Navigatioin         */
 /*******************************/
-.navbar-inverse { border-radius: 0; background-color: black; border-bottom:1px solid rgba(255, 255, 255, 0.15); min-height:100px; padding-top:25px; margin-bottom:0;}
+.navbar-inverse { border-radius: 0; background-color: black; border-bottom:1px solid rgba(255, 255, 255, 0.0); min-height:100px; padding-top:25px; margin-bottom:0 font-size:21px;font-family: "Open sans", helvetica, arial;}
 .navbar-inverse *:focus { outline: 0; }
 @media (max-width: 767px) {
 	.navbar-inverse {  background:rgba(0,0,0,.9); }
 }
 
 .navbar-inverse .navbar-nav > li > a,
-.navbar-inverse .navbar-nav > .open ul > a { color:rgba(255, 255, 255, .4); }
+.navbar-inverse .navbar-nav > .open ul > a { color:#3399ff; }
 
 .navbar-inverse .navbar-nav > .active > a,
 .navbar-inverse .navbar-nav > .active > a:hover, 
@@ -20,7 +20,7 @@
 .navbar-inverse .navbar-nav>.open>a:hover, 
 .navbar-inverse .navbar-nav>.open>a:focus { background:none; color:white; }
 
-.navbar-inverse .navbar-nav > .active > a { background:none; color:white; }
+.navbar-inverse .navbar-nav > .active > a { background:none; color:#3399ff; }
 
 .navbar-inverse .navbar-brand { font-family: "Open sans", helvetica, arial; font-size: 24px; color:white; padding:0 0 0 15px; margin:12px 0 0 0; }
 	.navbar-inverse .navbar-brand img { margin-top:-8px;}

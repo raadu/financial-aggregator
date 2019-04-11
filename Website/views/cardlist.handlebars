@@ -3,7 +3,7 @@
   <br>
 </div>
 
-<div class="container">
+<div class="container" >
   <div class="row">
     
     <div class="col-sm-2">
@@ -11,16 +11,16 @@
     </div>
      <br>
     <div class="col-sm-2">
-      <button type="button" class="btn btn-default" onclick="location.href='/creditcards/sortByInterestRate' ">Interest Rate</button>
+      <button type="button" class="btn btn-default" onclick="location.href='/creditcards/sortByInterestRate' " style="background-color: #27AE60; color: white;">Interest Rate</button>
     </div>
 
     <div class="col-sm-2">
-      <button type="button" class="btn btn-default" onclick="location.href='/creditcards/sortByAnnualFee' ">Annual Fee</button>
+      <button type="button" class="btn btn-default" onclick="location.href='/creditcards/sortByAnnualFee' " style="background-color: #27AE60; color: white;">Annual Fee</button>
     </div>
 
     <div class="col-sm-2">
        <div class="dropdown">
-        <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">Bank Name<span class="caret"></span></button>
+        <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" style="background-color: #27AE60; color: white;">Bank Name<span class="caret"></span></button>
           <ul class="dropdown-menu">
             <li><a href="/creditcards/citybank">City Bank</a></li>
             <li><a href="/creditcards/standardchartered">Standard Chartered</a></li>
@@ -38,7 +38,7 @@
 
     <div class="col-sm-2">
        <div class="dropdown">
-        <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">Card Type<span class="caret"></span></button>
+        <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" style="background-color: #27AE60; color: white;">Card Type<span class="caret"></span></button>
           <ul class="dropdown-menu">
             <li><a href="/creditcards/visa">Visa</a></li>
             <li><a href="/creditcards/mastercard">Master Card</a></li>
@@ -55,13 +55,15 @@
 
 <div class="container">
       <h4></h4>
-        <p class="text-right"><a class="btn btn-primary btn-large" onclick="location.href='/creditcards/cardform' ">Aggregate</a></p>
-        <h2 class="text-left">Get the best cards for you </h2>
+        
+        <h2 class="text-center">Get the best cards for you </h2>
+        <br>
+        <p class="text-center"><a class="btn btn-primary btn-large" onclick="location.href='/creditcards/cardform' ">Aggregate</a></p>
 </div>
 
 {{#each items}}
 
-<div class="container" style="margin-bottom:15px; margin-top:15px">
+<div class="container" style="margin-bottom:15px; margin-top:15px ;border: 3px solid orange; border-radius: 12px;">
   
   <div class="row equal">
     <div class="col-xs-6 col-sm-3" style="background-color:lavender;">

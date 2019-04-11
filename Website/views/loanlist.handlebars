@@ -12,12 +12,12 @@
     <br>
 
     <div class="col-sm-2">
-      <button type="button" class="btn btn-default" onclick="location.href='/loans/loanbyInterestRate' ">Interest Rate</button>
+      <button type="button" class="btn btn-default" onclick="location.href='/loans/loanbyInterestRate' " style="background-color: #27AE60; color: white;">Interest Rate</button>
     </div>
 
     <div class="col-sm-2">
        <div class="dropdown">
-        <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">Bank Name<span class="caret"></span></button>
+        <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" style="background-color: #27AE60; color: white;">Bank Name<span class="caret" ></span></button>
           <ul class="dropdown-menu">
             <li><a href="/loans/citybank">City Bank</a></li>
             <li><a href="/loans/standardchartered">Standard Chartered</a></li>
@@ -35,7 +35,7 @@
 
     <div class="col-sm-2">
        <div class="dropdown">
-        <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">Loan Type<span class="caret"></span></button>
+        <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" style="background-color: #27AE60; color: white;">Loan Type<span class="caret"></span></button>
           <ul class="dropdown-menu">
             <li><a href="/loans/homeloan">Home Loan</a></li>
             <li><a href="/loans/autoloan">Auto Loan</a></li>
@@ -55,13 +55,15 @@
 
 <div class="container">
       <h4></h4>
-        <p class="text-right"><a class="btn btn-primary btn-large" onclick="location.href='/loans/loanform' ">Aggregate</a></p>
-        <h2 class="text-left">Get the best loan for you </h2>
+        
+        <h2 class="text-center">Get the best loans for you </h2>
+        <br>
+        <p class="text-center"><a class="btn btn-primary btn-large" onclick="location.href='/loans/loanform' ">Aggregate</a></p>
 </div>
 
 {{#each items}}
 
-<div class="container" style="margin-bottom:15px; margin-top:15px">
+<div class="container" style="margin-bottom:15px; margin-top:15px; border: 3px solid orange;border-radius: 8px;">
   
   <div class="row equal">
     <div class="col-xs-6 col-sm-3" style="background-color:#E6E6E6;">
