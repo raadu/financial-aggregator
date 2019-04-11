@@ -41,6 +41,9 @@ router.get('/userlist', function(req, res, next) {
   });
 });
 
+//Retrieve logged in user profile info
+
+
 //Show editprofile
 router.get('/editprofile', function(req, res){
 	res.render('editprofile');
