@@ -18,7 +18,7 @@
     <div class="col-sm-2">
        <div class="dropdown">
         <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" style="background-color: #27AE60; color: white;">Bank Name<span class="caret" ></span></button>
-          <ul class="dropdown-menu">
+          <ul class="dropdown-menu" style="background-color: #27AE60;">
             <li><a href="/loans/citybank">City Bank</a></li>
             <li><a href="/loans/standardchartered">Standard Chartered</a></li>
             <li><a href="/loans/bracbank">Brac Bank</a></li>
@@ -36,7 +36,7 @@
     <div class="col-sm-2">
        <div class="dropdown">
         <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" style="background-color: #27AE60; color: white;">Loan Type<span class="caret"></span></button>
-          <ul class="dropdown-menu">
+          <ul class="dropdown-menu" style="background-color: #27AE60;">
             <li><a href="/loans/homeloan">Home Loan</a></li>
             <li><a href="/loans/autoloan">Auto Loan</a></li>
             <li><a href="/loans/personalloan">Personal Loan</a></li>
@@ -53,13 +53,19 @@
   </div>
 </div>
 
+<br>
+<br>
+
 <div class="container">
       <h4></h4>
         
         <h2 class="text-center">Get the best loans for you </h2>
         <br>
-        <p class="text-center"><a class="btn btn-primary btn-large" onclick="location.href='/loans/loanform' ">Aggregate</a></p>
+        <p class="text-center"><button style="background-color: #d35400; color: white;" class="btn btn-default" onclick="location.href='/loans/loanform' ">Aggregate</button></p>
 </div>
+
+<br>
+<br>
 
 {{#each items}}
 
