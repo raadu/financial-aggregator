@@ -90,8 +90,7 @@ router.get('/sortByAnnualFee', function(req, res, next) {
   mongoose.connect(url, { useNewUrlParser: true }, function(err, db) {
     assert.equal(null, err);
     var sort = {annualFee: 1};
-    var sort2 = {bankName: "City Bank"};
-    var cursor = db.collection('creditcards').find().sort(sort).sort(sort2); //inside mongoDB, collection name in 'creditcards'
+    var cursor = db.collection('creditcards').find().sort(sort); //inside mongoDB, collection name in 'creditcards'
     cursor.forEach(function(doc, err) {
       assert.equal(null, err);
       resultArray.push(doc);
