@@ -21,6 +21,11 @@ router.get('/contact', function(req, res){
 	res.render('contact');
 });
 
+//Get Aggregation Starting page
+router.get('/aggregationstart', function(req, res){
+  res.render('aggregationstart');
+});
+
 /* COMMENTING OUT CODES FOR FILE/PICTURE UPLOAD
 
 //GridFS upload route
