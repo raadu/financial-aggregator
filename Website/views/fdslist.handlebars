@@ -114,7 +114,11 @@
       <br>
       <button type="button" class="btn btn-default" style="margin-left: 10px;">Rate This</button><br>
       <br>
+      {{#if user}}
       <button type="button" class="btn btn-action">Get This FDS</button><br>
+      {{else}}
+      <button type="button" class="btn btn-action" onclick="location.href='/users/login' ">Get This FDS</button><br>
+      {{/if}}
       <br>
       <br>
     </div>
