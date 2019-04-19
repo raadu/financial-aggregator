@@ -26,6 +26,10 @@ router.get('/aggregationstart', function(req, res){
   res.render('aggregationstart');
 });
 
+//Get Aggregation Starting page
+router.get('/confirmation', function(req, res){
+  res.render('confirmation');
+});
 /* COMMENTING OUT CODES FOR FILE/PICTURE UPLOAD
 
 //GridFS upload route
