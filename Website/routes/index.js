@@ -26,53 +26,9 @@ router.get('/aggregationstart', function(req, res){
   res.render('aggregationstart');
 });
 
-//Get Aggregation Starting page
+//Get Product Confirmation page
 router.get('/confirmation', function(req, res){
   res.render('confirmation');
-});
-/* COMMENTING OUT CODES FOR FILE/PICTURE UPLOAD
-
-//GridFS upload route
-router.post('/upload', multer().single('file'), (req, res) => {
-  res.redirect('upload');
-});
-
-//Get upload page
-let gfs;
-router.get('/upload', (req, res) => {
-  gfs.files.find().toArray((err, files) => {
-    // Check if files
-    if (!files || files.length === 0) {
-      res.render('upload', { files: false });
-    } else {
-      files.map(file => {
-        if (
-          file.contentType === 'image/jpeg' ||
-          file.contentType === 'image/png'
-        ) {
-          file.isImage = true;
-        } else {
-          file.isImage = false;
-        }
-      });
-      res.render('upload', { files: files });
-    }
-  });
-});
-
-*/
-
-
-
-
-//Get Loan List page
-/* router.get('/loanlist', function(req, res){
-	res.render('loanlist');
-}); */
-
-//Get Fixed Deposit List page
-router.get('/fixeddepositlist', function(req, res){
-	res.render('fixeddepositlist');
 });
 
 //Get Loan List page

@@ -5,11 +5,6 @@ var mongoose = require('mongoose');
 
 var url = 'mongodb://localhost/fintech';
 
-//Show data without any conditions inside
-/* router.get('/getdata', function(req, res){
-	res.render('getdata');
-}); */
-
 //get data from mongodb
 // this router.get('location') leads to url: loans/[location]
 router.get('/loanlist', function(req, res, next) {
@@ -34,9 +29,6 @@ router.get('/result', function(req, res){
   var loanamount = req.query.loanamount;
   var age = req.query.age;
   var loantenure = req.query.loantenure;
-  //var lol = 1;
-  //res.send(loantenure);
-
 
   var resultArray = [];
   mongoose.connect(url, { useNewUrlParser: true }, function(err, db) {
@@ -117,28 +109,6 @@ router.get('/autoloan', function(req, res, next) {
     });
   });
 });
-
-/* COMMENTING OUT
-
-//sort by Auto Loan + personal loan
-router.get('/autoloanplus', function(req, res, next) {
-  var resultArray = [];
-  mongoose.connect(url, { useNewUrlParser: true }, function(err, db) {
-    assert.equal(null, err);
-    var query = { loanType: "Personal Loan", bankName: "AB Bank"};
-    var cursor = db.collection('loans').find(query); //inside mongoDB, collection name in 'creditcards'
-    cursor.forEach(function(doc, err) {
-      assert.equal(null, err);
-      resultArray.push(doc);
-    }, function() {
-      db.close();
-      res.render('loanlist', {items: resultArray}); //rendered in 'cardlist.handlebars' view
-    });
-  });
-});
-
-*/
-
 
 
 //sort by Personal Loan
@@ -448,10 +418,6 @@ router.get('/nationalbank', function(req, res, next) {
     });
   });
 });
-
-
-
-
 
 
 module.exports = router;

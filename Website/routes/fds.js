@@ -5,10 +5,6 @@ var mongoose = require('mongoose');
 
 var url = 'mongodb://localhost/fintech';
 
-//Show data without any conditions inside
-/* router.get('/getdata', function(req, res){
-	res.render('getdata');
-}); */
 
 //get data from mongodb
 // this router.get('location') leads to url: fds/[location]
