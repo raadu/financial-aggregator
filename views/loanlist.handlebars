@@ -1,0 +1,127 @@
+<div class="container">
+  <h2>Loans</h2>
+  <br>
+</div>
+
+<div class="container">
+  <div class="row">
+    
+    <div class="col-sm-2">
+      <h3>Sort By</h3>
+    </div>
+    <br>
+
+    <div class="col-sm-2">
+      <button type="button" class="btn btn-default" onclick="location.href='/loans/loanbyInterestRate' " style="background-color: #27AE60; color: white;">Interest Rate</button>
+    </div>
+
+    <div class="col-sm-2">
+       <div class="dropdown">
+        <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" style="background-color: #27AE60; color: white;">Bank Name<span class="caret" ></span></button>
+          <ul class="dropdown-menu" style="background-color: #27AE60;">
+            <li><a href="/loans/citybank">City Bank</a></li>
+            <li><a href="/loans/standardchartered">Standard Chartered</a></li>
+            <li><a href="/loans/bracbank">Brac Bank</a></li>
+            <li><a href="/loans/abbank">AB Bank</a></li>
+            <li><a href="/loans/dbbl">Dutch Bangla Bank</a></li>
+            <li><a href="/loans/onebank">One Bank</a></li>
+            <li><a href="/loans/primebank">Prime Bank</a></li>
+            <li><a href="/loans/easternbank">Eastern Bank</a></li>
+            <li><a href="/loans/southeastbank">South East Bank</a></li>
+            <li><a href="/loans/nationalbank">National Bank</a></li>
+          </ul>
+        </div> 
+    </div>
+
+    <div class="col-sm-2">
+       <div class="dropdown">
+        <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" style="background-color: #27AE60; color: white;">Loan Type<span class="caret"></span></button>
+          <ul class="dropdown-menu" style="background-color: #27AE60;">
+            <li><a href="/loans/homeloan">Home Loan</a></li>
+            <li><a href="/loans/autoloan">Auto Loan</a></li>
+            <li><a href="/loans/personalloan">Personal Loan</a></li>
+            <li><a href="/loans/holidayloan">Holiday Loan</a></li>
+            <li><a href="/loans/studentloan">Student Loan</a></li>
+            <li><a href="/loans/womensloan">Women's Loan</a></li>
+            <li><a href="/loans/executiveloan">Executive Loan</a></li>
+            <li><a href="/loans/doctorsloan">Doctor's Loan</a></li>
+            <li><a href="/loans/retailloan">Retail Secured EMI</a></li>
+
+          </ul>
+        </div> 
+    </div>
+  </div>
+</div>
+
+<br>
+<br>
+
+<div class="container">
+      <h4></h4>
+        
+        <h2 class="text-center">Get the best loans for you </h2>
+        <br>
+        <p class="text-center"><button style="background-color: #d35400; color: white;" class="btn btn-default" onclick="location.href='/loans/loanform' ">Aggregate</button></p>
+</div>
+
+<br>
+<br>
+
+{{#each items}}
+
+<div class="container" style="margin-bottom:15px; margin-top:15px; border: 3px solid orange;border-radius: 8px;">
+  
+  <div class="row equal">
+    <div class="col-xs-6 col-sm-3" style="background-color:#E6E6E6;">
+      <h3><b>{{this.bankName}}</b></h3>
+    <hr>
+    <p><img src="/images/bank.jpg" width="250px"></p>
+    <h4>Short term: <i>{{this.bankRatingShort}}</i>
+    <br>Long term: <i>{{this.bankRatingLong}}</i>
+    </h4>    
+  </div>
+    <div class="col-xs-6 col-sm-3" style="background-color:#D8D8D8;">
+      <h3><b>{{this.loanType}}</b></h3>
+    <hr>
+    <p><img src="/images/loan.png" width="220px" height="150px"><br>
+    </p>
+    <h3>Interest Rate</h3>
+    <h4>{{this.interestRate}}</h4> <br>
+  </div>
+    <div class="clearfix visible-xs"></div>
+     <div class="col-xs-6 col-sm-3" style="background-color:#A4A4A4;">
+      <h3><b>Charges</b></h3>
+      <hr>
+      <p class="" >
+        Floating Rate: {{this.floatingRate}}<br>
+        Minimum Loan Amount: {{this.minLoanAmount}} BDT<br>
+        Maximum Loan Amount: {{this.maxLoanAmount}} BDT<br>
+        Maximum Tenure: {{this.maxLoanTenure}} Years<br>
+        Minimum Tenure: {{this.minLoanTenure}} Years<br>
+        Minimum Income: {{this.minIncome}}<br>
+        Processing Fee: {{this.processingFee}}<br>
+        Early Settlement Fee: {{this.earlySettlementFees}}      
+      </p>
+    
+ 
+  </div>
+ 
+  
+    <div class="col-xs-6 col-sm-3" style="background-color:#6E6E6E;">
+      <h3><b>Rating</b></h3>
+      <hr>
+      <br>
+      <button type="button" class="btn btn-default" style="margin-left: 10px;">Rate This</button><br>
+      <br>
+      {{#if user}}
+      <button type="button" class="btn btn-action" onclick="location.href='/users/confirmation' ">Get This Loan</button><br>
+      {{else}}
+      <button type="button" class="btn btn-action" onclick="location.href='/users/login' ">Get This Loan</button><br>
+      {{/if}}
+      <br>
+      <br>
+    </div>
+  </div>
+</div>
+
+ {{/each}}

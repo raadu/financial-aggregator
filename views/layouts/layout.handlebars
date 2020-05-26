@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport"    content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="">
+	<meta name="author"      content="Raiyad Raad">
+	
+	<title>BankConnectBD</title>
+
+	
+	
+	<link rel="stylesheet" media="screen" href="http://fonts.googleapis.com/css?family=Open+Sans:300,400,700">
+	<link rel="stylesheet" href="/css/bootstrap.min.css">
+	<link rel="stylesheet" href="/css/font-awesome.min.css">
+
+
+	<!-- Custom styles for our template -->
+	<link rel="stylesheet" href="/css/bootstrap-theme.css" media="screen" >
+	<link rel="stylesheet" href="/css/main.css">
+
+</head>
+
+<body class="home">
+	<!-- Fixed navbar -->
+	<div class="navbar navbar-inverse navbar-fixed-top headroom" >
+		<div class="container">
+			<div class="navbar-header">
+				<!-- Button for smallest screens -->
+				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse"><span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
+				<a class="navbar-brand" href="/"><img src="/images/logosmall.png" width="300px" height="60px" alt="BFD"></a>
+			</div>
+			<div class="navbar-collapse collapse">
+				<ul class="nav navbar-nav pull-right">
+					<li class="active"><a href="/">Home</a></li>
+					<li><a href="/about">About Us</a></li>
+					<li class="dropdown">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown">Services <b class="caret"></b></a>
+						<ul class="dropdown-menu">
+							<li><a style="color: black;" href="/creditcards/cardlist">Credit Cards</a></li>
+							<li><a style="color: black;" href="/loans/loanlist">Loans</a></li>
+							<li><a style="color: black;" href="/fds/fdslist">Fixed Deposits</a></li>
+							<li><a style="color: black;" href="/dfslist">DFS</a></li>
+							
+						</ul>
+					</li>
+					<li><a href="/contact">Contact</a></li>
+					<!--if condition to show logout button to logged in users 
+					and hide login, register button from logged in users  -->
+					{{#if user}}
+					<li><a class="btn" href="/users/profile">Profile</a></li>
+					<li><a class="btn" href="/users/logout">Logout</a></li>
+					{{else}}
+					<li><a class="btn" href="/users/register">Register</a></li>
+					<li><a class="btn" href="/users/login">Login</a></li>
+					{{/if}}
+					
+				</ul>
+			</div><!--/.nav-collapse -->
+		</div>
+	</div> 
+	<!-- /.navbar -->
+
+	<div class="body-main">
+	<!-- Registration message showing starts -->
+	{{#if success_msg}}
+            <div class="alert alert-success">{{success_msg}}</div>
+  	{{/if}}
+
+  	{{#if error_msg}}
+            <div class="alert alert-danger">{{error_msg}}</div>
+  	{{/if}}
+
+  	{{#if error}}
+            <div class="alert alert-danger">{{error}}</div>
+	{{/if}}
+	<!-- Registration message showing ends -->
+		
+	{{{body}}}
+	</div>
+		
+
+	<footer id="footer" class="top-space">
+
+		<div class="footer1">
+			<div class="container">
+				<div class="row">
+					
+					<div class="col-md-3 widget">
+						<h3 class="widget-title">Contact</h3>
+						<div class="widget-body">
+							<p>+8801743906668<br>
+								<a href="mailto:#">contact@bankconnectbd.com</a><br>
+								<br>
+								North South University, Basundhara R/A, Dhaka - 1229, Bangladesh
+							</p>	
+						</div>
+					</div>
+
+					<div class="col-md-3 widget">
+						<h3 class="widget-title">Follow Us</h3>
+						<div class="widget-body">
+							<p class="follow-me-icons">
+								<a href=""><i class="fa fa-twitter fa-2"></i></a>
+								<a href=""><i class="fa fa-dribbble fa-2"></i></a>
+								<a href=""><i class="fa fa-github fa-2"></i></a>
+								<a href=""><i class="fa fa-facebook fa-2"></i></a>
+							</p>	
+						</div>
+					</div>
+
+					<div class="col-md-6 widget">
+						<h3 class="widget-title">Useful Links</h3>
+						<div class="widget-body">
+							<li><a href="/">Home</a></li>
+							<li><a href="#">FAQ</a></li>
+							<li><a href="/about">About Us</a></li>
+							<li><a href="#">Privacy Policy</a></li>
+							<br>
+							<p> Made with ♥ in Dhaka <br> 
+							© Copyright 2018 by BankConnectBD. All rights reserved. </p>
+						</div>
+					</div>
+
+				</div> <!-- /row of widgets -->
+			</div>
+		</div>
+
+		<div class="footer2">
+			<div class="container">
+				<div class="row">
+					
+					<div class="col-md-6 widget">
+						<div class="widget-body">
+							
+						</div>
+					</div>
+
+					<div class="col-md-6 widget">
+						<div class="widget-body">
+							<p class="text-right"> </p>
+								
+						</div>
+					</div>
+
+				</div> <!-- /row of widgets -->
+			</div>
+		</div>
+
+	</footer>	
+
+	<script src="js/w3.js"></script> 
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+	<script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+	
+</body>
+</html>

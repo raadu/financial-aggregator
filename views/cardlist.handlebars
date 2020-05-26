@@ -1,0 +1,126 @@
+<div class="container">
+  <h2>Credit Cards</h2>
+  <br>
+</div>
+
+<div class="container" >
+  <div class="row">
+    
+    <div class="col-sm-2">
+      <h3>Sort By</h3>
+    </div>
+     <br>
+    <div class="col-sm-2">
+      <button type="button" class="btn btn-default" onclick="location.href='/creditcards/sortByInterestRate' " style="background-color: #27AE60; color: white;">Interest Rate</button>
+    </div>
+
+    <div class="col-sm-2">
+      <button type="button" class="btn btn-default" onclick="location.href='/creditcards/sortByAnnualFee' " style="background-color: #27AE60; color: white;">Annual Fee</button>
+    </div>
+
+    <div class="col-sm-2">
+       <div class="dropdown">
+        <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" style="background-color: #27AE60; color: white;">Bank Name<span class="caret"></span></button>
+          <ul class="dropdown-menu" style="background-color: #27AE60;">
+            <li><a href="/creditcards/citybank">City Bank</a></li>
+            <li><a href="/creditcards/standardchartered">Standard Chartered</a></li>
+            <li><a href="/creditcards/bracbank">Brac Bank</a></li>
+            <li><a href="/creditcards/abbank">AB Bank</a></li>
+            <li><a href="/creditcards/dbbl">Dutch Bangla Bank</a></li>
+            <li><a href="/creditcards/onebank">One Bank</a></li>
+            <li><a href="/creditcards/primebank">Prime Bank</a></li>
+            <li><a href="/creditcards/easternbank">Eastern Bank</a></li>
+            <li><a href="/creditcards/southeastbank">South East Bank</a></li>
+            <li><a href="/creditcards/nationalbank">National Bank</a></li>
+          </ul>
+        </div> 
+    </div>
+
+    <div class="col-sm-2">
+       <div class="dropdown">
+        <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" style="background-color: #27AE60; color: white;">Card Type<span class="caret"></span></button>
+          <ul class="dropdown-menu" style="background-color: #27AE60;">
+            <li><a href="/creditcards/visa">Visa</a></li>
+            <li><a href="/creditcards/mastercard">Master Card</a></li>
+            <li><a href="/creditcards/americanexpress">American Express</a></li>
+            <li><a href="/creditcards/debit">Debit Card</a></li>
+            <li><a href="/creditcards/prepaid">Prepaid Card</a></li>
+            <li><a href="/creditcards/special">Special Card</a></li>
+            
+          </ul>
+        </div> 
+    </div>
+  </div>
+</div>
+
+<br>
+<br>
+
+<div class="container">
+      <h4></h4>
+        
+        <h2 class="text-center">Get the best cards for you </h2>
+        <br>
+        <p class="text-center"><button style="background-color: #d35400; color: white;" class="btn btn-default" onclick="location.href='/creditcards/cardform' ">Aggregate</button></p>
+</div>
+
+<br>
+<br>
+
+{{#each items}}
+
+<div class="container" style="margin-bottom:15px; margin-top:15px ;border: 3px solid orange; border-radius: 12px;">
+  
+  <div class="row equal">
+    <div class="col-xs-6 col-sm-3" style="background-color:lavender;">
+      <h3><b>{{this.bankName}}</b></h3>
+    <hr>
+    <p><img src="/images/bank.jpg" width="250px"></p>
+    <h4>Short term: <i>{{this.bankRatingShort}}</i>
+    <br>Long term: <i>{{this.bankRatingLong}}</i>
+    </h4>    
+  </div>
+    <div class="col-xs-6 col-sm-3" style="background-color:skyblue;">
+      <h3><b>{{this.cardType}}</b></h3>
+    <hr>
+    <p><img src="/images/card.png" width="220px"><br>
+    </p>
+    <h4>{{this.cardName}}</h4> <br>
+  </div>
+    <div class="clearfix visible-xs"></div>
+     <div class="col-xs-6 col-sm-3" style="background-color:lightgray;">
+      <h3><b>Charges</b></h3>
+      <hr>
+      <p class="" >
+        Interest Rate (Monthly): {{this.interestRateMonthly}} %<br>
+        Annual Fee: {{this.annualFee}} BDT<br>
+        Late Payment Fee: {{this.latePaymentFee}}<br>
+        Over Limit Charge: {{this.overLimitCharge}}<br>
+        Cash Advance Limit: {{this.cashAdvanceLimit}}<br>
+        Supplimentary Card: {{this.numberOfSupplementaryCard}}<br>
+        Supplimentary Card Fee: {{this.supplementaryCardFee}}<br>
+        Card Replacement Fee: {{this.cardReplacementFee}}      
+      </p>
+    
+ 
+  </div>
+ 
+  
+    <div class="col-xs-6 col-sm-3" style="background-color:silver;">
+      <h3><b>Rating______</b></h3>
+      <hr>
+      <br>
+      <button type="button" class="btn btn-default" style="margin-left: 10px;">Rate This</button><br>
+      <br>
+      {{#if user}}
+      <button type="button" class="btn btn-action" onclick="location.href='/users/confirmation' ">Get This Card</button><br>
+      {{else}}
+      <button type="button" class="btn btn-action" onclick="location.href='/users/login' ">Get This Card</button><br>
+      {{/if}}
+      <br>
+      <br>
+    </div>
+  </div>
+</div>
+
+ {{/each}}
