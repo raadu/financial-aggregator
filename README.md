@@ -4,6 +4,7 @@ The Financial Aggregator brings the information of different banks of Bangladesh
 # Installation 
 To run the app enter this command 
 ```
+npm install
 npm start
 ```
 To run app with nodemon
